@@ -158,14 +158,3 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <a class="fab" href="https://wa.me/201224540101" target="_blank" rel="noopener" aria-label="Chat with Homatic on WhatsApp"><svg viewBox="0 0 32 32"><use href="#wa"/></svg></a>
 
-<script>
-(function(){
-var T=[["Lights on","Lights off"],["Open","Closed"],["Recording","Camera off"],["Watering","Irrigation off"]];
-var tiles=document.querySelectorAll('.tile'),c=document.getElementById('count');
-function upd(){var n=0;tiles.forEach(function(t,i){var on=t.getAttribute('aria-pressed')==='true';if(on)n++;document.getElementById('s'+i).textContent=T[i][on?0:1]});c.textContent=n+' of 4 on'}
-tiles.forEach(function(t){t.addEventListener('click',function(){t.setAttribute('aria-pressed',t.getAttribute('aria-pressed')==='true'?'false':'true');upd()})});
-upd();document.getElementById('y').textContent=new Date().getFullYear();
-})();
-</script>
-</body>
-</html>
